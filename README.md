@@ -2,6 +2,20 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Questions
+### How did you decide on the technical and architectural choices used as part of your solution?
+
+I used react for components and front end developement, and axios for fetching data from the pokemon api.
+
+### Are there any improvements you could make to your submission?
+
+I could improve the user experience and add more details about the pokemon view in a well presented manner.
+
+### What would you do differently if you were allocated more time?
+
+I would take the time to deeply understand the pokemon and api in order to optimize the way I am fetching data. Also I would show more information about each pokemon.
+
+
 ## Available Scripts
 
 In the project directory, you can run:
