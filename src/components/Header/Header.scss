@@ -1,0 +1,153 @@
+@import 'assets/styles/colors';
+
+header {
+    background-color: $red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 47px;
+
+}
+
+nav {
+    &>ul {
+        display: flex;
+        align-items: center;
+
+        &>li {
+            list-style-type: none;
+
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+.mobileNav{
+    position: absolute;
+    background-color: white;
+    width: 80%;
+    top: 76px;
+    text-align: center;
+    padding: 30px 20px;
+    z-index: 100;
+    border-radius: 6px;
+}
+
+.modal{
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.356);
+    z-index: 3;
+}
+
+.header__mobile__link{
+    display: block;
+    color: $darkGrey;
+    text-decoration: none;
+
+    &.active {
+        color: $red;
+    }
+
+    &:not(:last-child){
+        margin-bottom: 10px;
+    }
+}
+
+.header__link {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    font-weight: bold;
+    font-size: 22px;
+
+    &.active {
+        color: black;
+
+        &::before {
+            background-color: black;
+            width: 100%;
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: -32px;
+        left: 0;
+        width: 0px;
+        height: 4px;
+        background-color: white;
+        transition: 300ms width ease-in-out;
+        transform-origin: center;
+    }
+
+    &:hover {
+        &::before {
+            width: 100%;
+        }
+    }
+}
+
+.logo {
+    width: 200px;
+    display: block;
+}
+
+.hamburger {
+    display: none;
+    width: 24px;
+
+    >span {
+        display: block;
+        height: 4px;
+        width: 100%;
+        background: white;
+        transition: all 400ms ease-in-out;
+        transform-origin: 1px 2px;
+
+        &:not(:last-child){
+            margin-bottom: 4px
+        }
+    }
+
+        &.open{
+            > span:first-child{
+                transform: rotate(45deg);
+                }
+
+                > span:nth-child(2){
+                    width: 0;
+                    opacity: 0;
+            }
+
+            > span:last-child{
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+
+@media screen and (max-width: 576px) {
+
+    header {
+        padding: 10px 15px;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .logo {
+        width: 120px;
+    }
+}

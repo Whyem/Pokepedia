@@ -1,0 +1,100 @@
+@import "assets/styles/colors";
+
+.pokemonViewContainer {
+    background-color: white;
+    width: 500px;
+    border-radius: 6px;
+    margin: 0 auto;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+}
+
+.redHeader {
+    width: 100%;
+    background-color: $red;
+    height: 33px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.middle {
+    background-color: $darkGrey;
+    height: 9px;
+    text-align: center;
+    position: relative
+}
+
+.content{
+    padding: 20px 5px;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border: 9px solid $darkGrey;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.pokemon__img{
+    width: 200px;
+}
+
+.abilitiesContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 10px;
+}
+
+h1{
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+h3{
+    color:$darkGrey;
+    margin-bottom: 10px;
+}
+
+.typesContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.evolutionButton{
+    color: white;
+    background-color: $red;
+    border-radius: 6px;
+    width: 100%;
+    padding: 8px 0px;
+    font-weight: bold;
+    border: none;
+    font-family: inherit;
+    text-transform: uppercase;
+    margin-top: 30px;
+    transition: all 400ms ease-in-out;
+
+    &:hover{
+        background-color: darken($red,10%);
+    }
+}
+
+@media
+screen and (max-width: 576px) {
+    .pokemonViewContainer {
+        width: 90%;
+    }
+
+    .pokemon__img{
+        width: 70%;
+    }
+}

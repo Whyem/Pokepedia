@@ -1,0 +1,21 @@
+@import "assets/styles/colors";
+
+.selectContainer{
+    padding: 20px 0;
+}
+
+select{
+    background-color: white;
+    border: $darkGrey 2px solid;
+    border-radius: 6px;
+    padding: 10px;
+    font-family: inherit;
+    min-width: 200px;
+}
+
+label{
+    font-family: inherit;
+    font-weight: bold;
+    margin-right: 30px;
+    color: $darkGrey;
+}
